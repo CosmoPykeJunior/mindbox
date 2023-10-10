@@ -1,4 +1,4 @@
-﻿Select pr.ProductName 'Имя продукта', ct.CategoryName 'Имя категории' 
+﻿Select pr.ProductName, ct.CategoryName
 FROM Products pr
 LEFT OUTER JOIN dbo.CategoriesProducts cp
 ON cp.ProductsId = pr.Id
