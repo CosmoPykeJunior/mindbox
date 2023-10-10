@@ -1,14 +1,14 @@
-name: CI
+name: build/tests
 
 on:
   push:
   pull_request:
     branches: [ main ]
 env:
-  DOTNET_VERSION: '6.0.x'
+  DOTNET_VERSION: '7.0.x'
 jobs:
   ci:
-    name: ci-${{matrix.os}}
+    name: build/tests-${{matrix.os}}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:

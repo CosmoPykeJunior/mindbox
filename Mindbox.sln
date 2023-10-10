@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mindbox", "Mindbox\Mindbox.csproj", "{1543B9E5-122D-4B98-82C6-AFAF01461317}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mindbox", "Mindbox\Mindbox.csproj", "{1543B9E5-122D-4B98-82C6-AFAF01461317}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeTests", "ShapeTests\ShapeTests.csproj", "{D605A55F-06EB-47E2-AC35-C8EC345945D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{1543B9E5-122D-4B98-82C6-AFAF01461317}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1543B9E5-122D-4B98-82C6-AFAF01461317}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1543B9E5-122D-4B98-82C6-AFAF01461317}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D605A55F-06EB-47E2-AC35-C8EC345945D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D605A55F-06EB-47E2-AC35-C8EC345945D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D605A55F-06EB-47E2-AC35-C8EC345945D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D605A55F-06EB-47E2-AC35-C8EC345945D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
