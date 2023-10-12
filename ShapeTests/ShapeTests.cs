@@ -16,7 +16,7 @@ namespace ShapeTests
         [Fact]
         public void CircleSquareTest()
         {
-            var creator = InitShapeFactoryMoq(radius:10).Object;
+            var creator = InitShapeFactoryMoq(radius: 10).Object;
 
             IShape circle = creator.GetShape(10);
 
@@ -102,15 +102,15 @@ namespace ShapeTests
         }
 
 
-        private Mock<IShapeFactory> InitShapeFactoryMoq(double[] sides = null, double? radius = null)
+        private static Mock<IShapeFactory> InitShapeFactoryMoq(double[] sides = null, double? radius = null)
         {
             var mockFactory = new Mock<IShapeFactory>();
 
-            if(radius!= null)
-            mockFactory.Setup(x => x.GetShape(radius.Value)).Returns(new Circle(radius.Value));
+            if (radius != null)
+                mockFactory.Setup(x => x.GetShape(radius.Value)).Returns(new Circle(radius.Value));
 
-            if(sides!= null)
-            mockFactory.Setup(x => x.GetShape(sides[0], sides[1], sides[2])).Returns(new Triangle(sides[0], sides[1], sides[2]));
+            if (sides != null)
+                mockFactory.Setup(x => x.GetShape(sides[0], sides[1], sides[2])).Returns(new Triangle(sides[0], sides[1], sides[2]));
 
             return mockFactory;
         }
