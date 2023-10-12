@@ -1,6 +1,6 @@
 ﻿using Mindbox.Interfaces;
 
-namespace Mindbox.Core
+namespace Mindbox.Factory
 {
     public interface IShapeFactory
     {

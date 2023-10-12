@@ -1,7 +1,8 @@
 using Mindbox.Circle;
-using Mindbox.Core;
+using Mindbox.Factory;
 using Mindbox.Interfaces;
 using Mindbox.Triangle;
+using Mindbox.Helper;
 using Moq;
 
 namespace ShapeTests
@@ -22,7 +23,7 @@ namespace ShapeTests
 
             double expectedSquare = 314.16;
 
-            Assert.Equal(expectedSquare, ShapeProcessor.CalculateSquare(circle, DIGITS_COUNT_AFTER_COMMA));
+            Assert.Equal(expectedSquare, circle.CalculateSquareWithRounding(DIGITS_COUNT_AFTER_COMMA));
         }
 
         [Fact]
@@ -47,7 +48,7 @@ namespace ShapeTests
 
             double square = 0.97;
 
-            Assert.Equal(square, ShapeProcessor.CalculateSquare(triangle, DIGITS_COUNT_AFTER_COMMA));
+            Assert.Equal(square, triangle.CalculateSquareWithRounding(DIGITS_COUNT_AFTER_COMMA));
         }
 
         [Fact]
@@ -80,12 +81,9 @@ namespace ShapeTests
             IShape triangle = creator.GetShape(1, 2, 2);
 
             double square = 1.00;
-            Assert.Equal(square, Math.Floor(ShapeProcessor.CalculateSquare(triangle)));
-        }
 
-        [Fact]
-        public void NullableShapeProcessorTest() =>
-            Assert.Throws<ArgumentNullException>(() => ShapeProcessor.CalculateSquare(default));
+            Assert.Equal(square, Math.Floor(triangle.CalculateSquareWithRounding()));
+        }
 
         [Fact]
         public void CreatorReturnValidTypeOfShapeTest()
